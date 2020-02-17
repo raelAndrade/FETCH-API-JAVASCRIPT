@@ -1,0 +1,19 @@
+@hostname = localhost
+@port = 3000
+@name = clientes
+@contentType = application/json
+
+###
+GET http://{{hostname}}:{{port}}/{{name}}
+
+###
+GET http://{{hostname}}:{{port}}/{{name}}/6
+
+###
+POST http://{{hostname}}:{{port}}/clientes HTTP/1.1
+content-type: application/json
+
+{
+  "cpf": 123456789,
+  "nome": "Bianca"
+}
